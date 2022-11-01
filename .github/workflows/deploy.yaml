@@ -22,6 +22,6 @@ jobs:
         with:
           # e.g ssh://dokku@IP:22/~/APPNAME
           # See https://github.com/dokku/github-action/issues/15#issuecomment-1004828532
-          git_remote_url: '${{ secrets.DOKKU_HOST }}'
+          git_remote_url: 'dokku@${{ secrets.DOKKU_HOST }}/~/${{ secrets.DOKKU_APP_NAME }}'
           ssh_private_key: ${{ secrets.DOKKU_SSH_PRIVATE_KEY }}
           git_push_flags: '--force -vvv'
